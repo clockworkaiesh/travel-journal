@@ -1,13 +1,97 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
+a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,caption,center,cite,code,dd,del,details,dfn,div,dl,dt,em,embed,fieldset,figcaption,figure,footer,form,h1,h2,h3,h4,h5,h6,header,hgroup,html,i,iframe,img,ins,kbd,label,legend,li,mark,menu,nav,object,ol,output,p,pre,q,ruby,s,samp,section,small,span,strike,strong,sub,summary,sup,table,tbody,td,tfoot,th,thead,time,tr,tt,u,ul,var,video{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:after,blockquote:before,q:after,q:before{content:'';content:none}table{border-collapse:collapse;border-spacing:0}a{text-decoration:none}
+body{
+  font-family: 'Nunito Sans', sans-serif;
+  color: #2B283A;
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+}
+p{
+  font-size: calc(16px + (20 - 16) * ((100vw - 300px) / (1600 - 300)));
+  line-height: 1.5;
+}
+header{
+  background-color: #F55A5A;
+  color: #fff;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.logo{
+  font-style: normal;
+  font-weight: 500;
+  font-size: calc(18px + (24 - 18) * ((100vw - 300px) / (1600 - 300)));
+  line-height: 1.4;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+img.journey--image {
+  max-width: 300px;
+  height: 350px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+.journey--card {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  margin: 10px;
+  padding: 25px;
+  max-width: 800px;
+}
+.dark-text{
+  color: #2B283A;
+}
+.light-text{
+  color: #918E9B;
+}
+.uppercase{
+  text-transform: uppercase;
+}
+.title{
+  font-size: calc(28px + (40 - 28) * ((100vw - 300px) / (1600 - 300)));
+  font-weight: 800;
+  margin: 15px 0 25px 0;
+}
+.dates{
+  font-weight: 800;
+  margin-bottom: 15px;
+}
+.location{
+  padding-left: 15px;
+}
+.fa-location-dot{
+  color: #F55A5A;
+}
+@media screen and (max-width: 768px) {
+  img.journey--image {
+    max-width: 220px;
+    height: 280px;
+} 
+}
+@media screen and (max-width: 670px) {
+  img.journey--image {
+    max-width: 100%;
+    height: 330px;
+    width: 100%;
+}
+  .journey--card {
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    margin: 10px 10px 30px 10px;
+    padding: 15px 5px;
+    max-width: 800px;
+}
+  span{
+    display: block;
+    margin-bottom: 10px;
+  }
+}
+@media screen and (max-width: 500px) {
+  img.journey--image {
+    max-width: 100%;
+    height: 240px;
+    width: 100%;
+}
 }
